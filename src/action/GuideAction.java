@@ -34,7 +34,6 @@ public class GuideAction extends ActionSupport implements SessionAware{
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
-		
 	}
 
 	public Guide getGuide() {
