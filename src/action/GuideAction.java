@@ -24,14 +24,12 @@ public class GuideAction extends ActionSupport implements SessionAware{
 	
 	//==================================================
 	
-	public String showGuideProfile(String member_id){
+	public String showGuideProfile() throws Exception{
 		GuideDAO dao =  new GuideDAO();
-		guide = dao.showGiudeProfile(member_id);
+		guide = dao.showGuideProfile(member_id);
 		portfolioList = dao.showGuidePortfolio(member_id);
 		return SUCCESS;
 	} 
-	
-	
 	
 	@Override
 	public void setSession(Map<String, Object> session) {

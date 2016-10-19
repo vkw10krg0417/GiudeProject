@@ -14,8 +14,22 @@ public class Portfolio {
 	private String photo4;
 	private String photo5;
 	
-	public Portfolio() {
-		// TODO Auto-generated constructor stub
+	public Portfolio() {}
+	
+	public Portfolio(int portfolio, String member_id, String portfolio_title, String price, int hour, int max_people,
+			String content, String photo1, String photo2, String photo3, String photo4, String photo5) {
+		this.portfolio = portfolio;
+		this.member_id = member_id;
+		this.portfolio_title = portfolio_title;
+		this.price = price;
+		this.hour = hour;
+		this.max_people = max_people;
+		this.content = content;
+		this.photo1 = photo1;
+		this.photo2 = photo2;
+		this.photo3 = photo3;
+		this.photo4 = photo4;
+		this.photo5 = photo5;
 	}
 
 	public int getPortfolio() {

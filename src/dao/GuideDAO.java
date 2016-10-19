@@ -5,6 +5,9 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import vo.Guide;
+import vo.Portfolio;
+
 public class GuideDAO {
 	private SqlSessionFactory factory = MybatisConfig.getSqlSessionFactory();
 	private SqlSession sqlsession;
@@ -24,7 +27,7 @@ public class GuideDAO {
 		return guide;
 	}
 	
-	public void showGuideProtfolio(String member_id) {
+	public List<Portfolio> showGuidePortfolio(String member_id) {
 		List<Portfolio> portfolioList = null;
 		try{
 			sqlsession = factory.openSession();
@@ -37,5 +40,18 @@ public class GuideDAO {
 		return portfolioList;
 	}
 	
+	public void updateGuideProfile(Guide guide) {
+		try{
+			sqlsession = factory.openSession();
+			int result = sqlsession.update("guide.updateGuideProfile", guide);
+			if(result > 0) {
+				sqlsession.commit();
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlsession.close();
+		}
+	}
 	
 }

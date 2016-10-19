@@ -8,8 +8,16 @@ public class Guide {
 	private String available_terms;
 	private String prove;
 	
-	public Guide() {
-		// TODO Auto-generated constructor stub
+	public Guide() {}
+
+	public Guide(String member_id, String guide_photo, String language, String guide_profile, String available_terms,
+			String prove) {
+		this.member_id = member_id;
+		this.guide_photo = guide_photo;
+		this.language = language;
+		this.guide_profile = guide_profile;
+		this.available_terms = available_terms;
+		this.prove = prove;
 	}
 
 	public String getMember_id() {
