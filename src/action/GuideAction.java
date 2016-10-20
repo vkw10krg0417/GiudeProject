@@ -29,7 +29,7 @@ public class GuideAction extends ActionSupport implements SessionAware{
 		guide = dao.showGuideProfile(member_id);
 		portfolioList = dao.showGuidePortfolio(member_id);
 		System.out.println("과연 성공일 것인가");
-		System.out.println("이런이런");
+		System.out.println("이런이런123");
 		return SUCCESS;
 	} 
 	
