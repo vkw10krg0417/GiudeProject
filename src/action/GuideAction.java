@@ -28,6 +28,7 @@ public class GuideAction extends ActionSupport implements SessionAware{
 		GuideDAO dao =  new GuideDAO();
 		guide = dao.showGuideProfile(member_id);
 		portfolioList = dao.showGuidePortfolio(member_id);
+		System.out.println("과연 성공일 것인가");
 		return SUCCESS;
 	} 
 	

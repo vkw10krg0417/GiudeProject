@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+ <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- 
 Template Name: Travelite - Tours and Travels Online Booking HTML
@@ -242,7 +242,7 @@ Version: 1.0.0
     <!--page title start-->
     <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0" style="background-image:url(http://placehold.it/1599x640);">
       <ul>
-        <li><a href="javascript:;">contact us</a></li>
+        <li><a href="javascript:;">GUIDE PROFILE</a></li>
       </ul>
     </div>
     <!--page title end-->
@@ -267,7 +267,8 @@ Version: 1.0.0
 						     <div class="row">
 								<div class="slide_img_wrpr col-lg-7 col-md-7 col-sm-7">
 								<div class="containt_container">
-								<h4 class="Travelite_slide_title">Mountain Trekking</h4>
+								<h4 class="Travelite_slide_title">Mountain Trekking</h4> 
+								<!-- <h4 class="Travelite_slide_title"><s:property value="guide.member_id" /></h4>-->
 								<p class="slide_timing">February 3rd 6.00am to 12.00pm</p>
 								<ul class="social_reviews">
 									<li><a href="#"><i class="fa fa-comment"></i> 10</a></li>
@@ -277,7 +278,7 @@ Version: 1.0.0
 								</ul>
 								</div>
 								<img src="http://placehold.it/380x338" alt="" class="img-responsive" >
-							
+								<%-- <img src="<s:property value="guide.guide_photo" />" alt="" class="img-responsive" > --%>
 								</div>
 								<div class="col-lg-5 col-md-5 col-sm-5 slide_right_thumb">
 								<img src="http://placehold.it/116x96" alt="slidethumb">
